@@ -1,6 +1,12 @@
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.hardware.Gamepad;
+
+@TeleOp(name = "Rares")
 public final class Rares extends RobotHardware {
+
+    static final double DEADZONE = 0.1;
 
     @Override
     public void runOpMode() throws InterruptedException {
@@ -9,8 +15,17 @@ public final class Rares extends RobotHardware {
         waitForStart();
 
         while(opModeIsActive()) {
-            setPowerLeft();
-            setPowerRight();
+            Gamepad1();
+
         }
+    }
+
+    private void Gamepad1(){
+        if(Math.abs(gamepad1.left_stick_y) > DEADZONE || Math.abs(gamepad1.right_stick_y) > DEADZONE){
+            SetWheelsPower(gamepad1.left_stick_y, gamepad1.right_stick_y);
+        }else{
+            StopWheels();
+        }
+
     }
 }

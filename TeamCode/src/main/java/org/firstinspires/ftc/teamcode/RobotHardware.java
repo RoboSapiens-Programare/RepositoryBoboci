@@ -6,31 +6,37 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.util.Range;
 
 public abstract class RobotHardware extends LinearOpMode {
-    DcMotor motorSS = null;
-    DcMotor motorSJ = null;
-    DcMotor motorDS = null;
-    DcMotor motorDJ = null;
+    DcMotor MotorFL = null;
+    DcMotor MotorBL = null;
+    DcMotor MotorFR = null;
+    DcMotor MotorBR = null;
 
     public void initialise() {
-        motorSS = hardwareMap.dcMotor.get("motorSS");
-        motorSJ = hardwareMap.dcMotor.get("motorSJ");
-        motorDS = hardwareMap.dcMotor.get("motorDS");
-        motorDJ = hardwareMap.dcMotor.get("motorDJ");
+        MotorFL = hardwareMap.dcMotor.get("MotorFL");
+        MotorBL = hardwareMap.dcMotor.get("MotorBL");
+        MotorFR = hardwareMap.dcMotor.get("MotorFR");
+        MotorBR = hardwareMap.dcMotor.get("MotorBR");
 
-        motorSS.setDirection(DcMotorSimple.Direction.FORWARD);
-        motorSJ.setDirection(DcMotorSimple.Direction.FORWARD);
-        motorDS.setDirection(DcMotorSimple.Direction.REVERSE);
-        motorDJ.setDirection(DcMotorSimple.Direction.REVERSE);
+        MotorFL.setDirection(DcMotorSimple.Direction.FORWARD);
+        MotorBL.setDirection(DcMotorSimple.Direction.FORWARD);
+        MotorFR.setDirection(DcMotorSimple.Direction.REVERSE);
+        MotorBR.setDirection(DcMotorSimple.Direction.REVERSE);
+
+        MotorFL.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        MotorBL.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        MotorFR.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        MotorBR.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
     }
 
-    public void setPowerLeft() {
-        motorSS.setPower(Range.clip(gamepad1.left_stick_y, -0.7,0.7));
-        motorSJ.setPower(Range.clip(gamepad1.left_stick_y, -0.7,0.7));
+    protected void SetWheelsPower(double speedL, double speedR){
+        MotorFL.setPower(Range.clip(speedL, -0.7,0.7));
+        MotorBL.setPower(Range.clip(speedL, -0.7,0.7));
+        MotorFR.setPower(Range.clip(speedR, -0.7,0.7));
+        MotorBR.setPower(Range.clip(speedR, -0.7,0.7));
     }
 
-    public void setPowerRight() {
-        motorDS.setPower(Range.clip(gamepad1.right_stick_y, -0.7,0.7));
-        motorDJ.setPower(Range.clip(gamepad1.right_stick_y, -0.7,0.7));
+    protected void StopWheels(){
+        SetWheelsPower(0,0);
     }
 }
