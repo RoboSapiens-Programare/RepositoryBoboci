@@ -29,12 +29,10 @@ Cand lucrati in acest repo, **nu modificati nimic din alte clase in afara de ale
 **Exemple**:
 	```
 	void StopWheels(){
-		
 	}
 	```
 	```
 	void SetWheelsPower(double speedLeft, double speedRight){
-	
 	}
 	```
 	
