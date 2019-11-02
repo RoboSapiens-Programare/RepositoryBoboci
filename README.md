@@ -31,6 +31,7 @@ Cand lucrati in acest repo, **nu modificati nimic din alte clase in afara de ale
 	void StopWheels(){
 	}
 	```
+	or
 	```
 	void SetWheelsPower(double speedLeft, double speedRight){
 	}
