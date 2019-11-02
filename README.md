@@ -1,8 +1,9 @@
 ## Adaugare Clase Noi
 
 Clasele trebuie sa fie numite dupa foarma `<nume>_<nume clasa>`, unde:
-	- `<nume>` este numele vostru (cu litera mare)
-	- `<nume_clasa>` este numele clasei pe care vreti sa o creati (preferabil tot cu litera mare)
+
+* `<nume>` este numele vostru (cu litera mare)
+* `<nume_clasa>` este numele clasei pe care vreti sa o creati (preferabil tot cu litera mare)
 	
 Exemplu: Matei_DriverMode
 
