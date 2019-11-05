@@ -11,7 +11,7 @@ public abstract class RobotHardware extends LinearOpMode {
     DcMotor MotorFR = null;
     DcMotor MotorBR = null;
 
-    public void initialise() {
+    public void Initialise() {
         MotorFL = hardwareMap.dcMotor.get("MotorFL");
         MotorBL = hardwareMap.dcMotor.get("MotorBL");
         MotorFR = hardwareMap.dcMotor.get("MotorFR");

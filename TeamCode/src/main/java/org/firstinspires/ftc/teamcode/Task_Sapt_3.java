@@ -32,6 +32,7 @@ public class Task_Sapt_3 extends LinearOpMode {
         MotorFL.setPower(0);
         MotorBL.setPower(0);
 
+        //Asteptam start
         waitForStart();
 
         while(opModeIsActive()){
