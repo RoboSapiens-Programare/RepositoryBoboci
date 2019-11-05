@@ -17,7 +17,7 @@ public class MosNeagu extends RobotHardware{
         ServoR = hardwareMap.servo.get("ServoR");
         ServoL = hardwareMap.servo.get("ServoL");
         ServoR.setDirection(Servo.Direction.FORWARD);
-        ServoL.setDirection(Servo.Direction.FORWARD);
+        ServoL.setDirection(Servo.Direction.REVERSE);
     }
 
     public void runOpMode(){
