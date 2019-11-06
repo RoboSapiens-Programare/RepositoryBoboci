@@ -43,6 +43,7 @@ public class MosNeagu extends RobotHardware{
 
         // SetWheelsPower(power(gamepad1.right_stick_x), power(gamepad1.left_stick_x));
 
+
         if (gamepad1.x){
             ServoL.setPosition(0.5);
             ServoR.setPosition(0.5);

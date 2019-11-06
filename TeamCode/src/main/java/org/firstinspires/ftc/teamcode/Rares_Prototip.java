@@ -4,8 +4,8 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.Servo;
 
-@TeleOp(name = "RaresPrototip")
-public final class RaresPrototip extends LinearOpMode {
+@TeleOp(name = "Rares_Prototip")
+public final class Rares_Prototip extends LinearOpMode {
     Servo ServoL = null;
     Servo ServoR = null;
 
@@ -16,14 +16,14 @@ public final class RaresPrototip extends LinearOpMode {
         ServoL = hardwareMap.servo.get("ServoL");
 
         ServoR.setDirection(Servo.Direction.FORWARD);
-        ServoL.setDirection(Servo.Direction.REVERSE);
+        ServoL.setDirection(Servo.Direction.FORWARD);
 
         waitForStart();
 
         while(opModeIsActive()) {
             if(gamepad1.x) {
-                ServoL.setPosition(0.55);
-                ServoR.setPosition(0.55);
+                ServoL.setPosition(0.50);
+                ServoR.setPosition(0.30);
             } else if(gamepad1.y) {
                 ServoL.setPosition(0);
                 ServoR.setPosition(0);

@@ -10,7 +10,7 @@ public class BrianaP_Gamepad12 extends RobotHardware {
         telemetry.addData("Status", "Initialized");
         telemetry.update();
         //Initializez hardware ul
-        Initialise();
+        initialise();
 
 
         waitForStart();

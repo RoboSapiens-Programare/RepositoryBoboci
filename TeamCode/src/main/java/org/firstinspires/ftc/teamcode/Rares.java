@@ -32,11 +32,11 @@ public final class Rares extends RobotHardware {
         }
     }
 
-    protected void SetServoAngle(boolean button) {
-        if(button == gamepad1.x) {
+    protected void SetServoAngle() {
+        if(gamepad1.x) {
             ServoL.setPosition(0.55);
             ServoR.setPosition(0.55);
-        } else if(button == gamepad1.y) {
+        } else if(gamepad1.y) {
             ServoL.setPosition(0);
             ServoR.setPosition(0);
         }
@@ -49,10 +49,8 @@ public final class Rares extends RobotHardware {
             StopWheels();
         }
 
-        if(gamepad1.x)
-            SetServoAngle(gamepad1.x);
-        else if(gamepad1.y)
-            SetServoAngle(gamepad1.y);
+
+        SetServoAngle();
 
     }
 }
