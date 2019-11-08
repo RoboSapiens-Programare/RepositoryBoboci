@@ -14,7 +14,7 @@ public class AlexiaCatalin_prototip extends RobotHardware {
     public void runOpMode() throws InterruptedException {
         servo1 = hardwareMap.servo.get("ServoR");
         servo2 = hardwareMap.servo.get("ServoL");
-        
+
         servo1.setDirection(Servo.Direction.FORWARD);
         servo2.setDirection(Servo.Direction.FORWARD);
 
@@ -26,7 +26,7 @@ public class AlexiaCatalin_prototip extends RobotHardware {
                 servo2.setPosition(0.5);
 
             }
-            if (gamepad2.x) {
+            if (gamepad1.x) {
                 servo1.setPosition(0.0);
                 servo2.setPosition(0.0);
             }
