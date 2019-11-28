@@ -45,7 +45,7 @@ public abstract class RobotHardware extends LinearOpMode {
     static double FLBRResult;
 
 
-    public void initialize(){
+    public void initialise(){
         MotorFR = hardwareMap.dcMotor.get("MotorFR");
         MotorFL = hardwareMap.dcMotor.get("MotorFL");
         MotorBR = hardwareMap.dcMotor.get("MotorBR");
